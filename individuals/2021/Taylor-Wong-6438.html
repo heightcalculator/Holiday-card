@@ -61,10 +61,10 @@ function hideStuff(id) {
   document.getElementById(id).style.display = 'none';
 }
 const date = new Date();
-/*if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) || date.getYear()+1900 >= 2022){
+if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) || date.getYear()+1900 >= 2022){
       hideStuff("card");
       alert("Sorry, Nothing available yet. Check back on Christmas Day :)")
-      }*/
+      }
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   console.log("Mobile")
 } else {
