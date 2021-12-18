@@ -1,0 +1,65 @@
+<style>
+   body{
+      font-family:serif;
+      text-align: center;
+      background-color: rgb(217, 217, 217);
+   }
+   h1{
+      font-size: 40px;
+      color:green;
+   }
+   h2{
+      font-size: 25px;
+      color:red;
+   }
+   p{
+      font-family: serif;
+      color: rgb(200,0,0)
+   }
+   #top{
+      font-family:serif;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-image: url("https://i.pinimg.com/originals/32/87/a4/3287a4ed6f92fc08afd082375096da80.gif");
+   }
+   button{
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 15px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      border-radius: 10%;
+      background-color:red;
+      color: green;
+      border-color: red;
+   }
+   #card{
+      
+   }
+   #reply{
+   }
+</style>
+<head>
+   <title>Christmas Card</title>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="description" content="Wishing you Happy Holidays from Aarush"/>
+  <meta name="image" content="https://www.creativefabrica.com/wp-content/uploads/2019/08/Merry-Christmas-2.jpg"/>
+<head>
+<body>
+   <div id=card>
+   <div id=top>
+      <h1><b>Happy Holidays</b><br><h2>and Merry Christmas</h2></h1></div>
+   <p>Hello Hello</p>
+   <button id="card" onclick="window.location.href='https://www.punchbowl.com/ecards/share/d4ad870a8f9973d5f2a9'"><b>View my Christmas Card!</b></button><br>
+   <button id="reply" onclick="window.location.href='sms:+1-770-569-3987'"><b>Reply to Aarush</b></button></div>
+</body>
+<script type="text/javascript">
+function hideStuff(id) {
+  document.getElementById(id).style.display = 'none';
+}
+/*   if(Date.now()<1640390400000){
+      hideStuff("card");
+      alert("Sorry, Nothing available yet. Check back on Christmas Day :)")
+      }*/
+   console.log(Date.now())
+</script>
