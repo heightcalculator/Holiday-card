@@ -1,0 +1,78 @@
+<style>
+   body{
+      font-family:serif;
+      text-align: center;
+      background-color: rgb(217, 217, 217);
+   }
+   h1{
+      font-size: 40px;
+      color:green;
+   }
+   h2{
+      font-size: 25px;
+      color:red;
+   }
+   p{
+      line-height:1.75;
+      font-family: serif;
+      color: rgb(200,0,0)
+   }
+   #top{
+      font-family:serif;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-image: url("https://i.pinimg.com/originals/32/87/a4/3287a4ed6f92fc08afd082375096da80.gif");
+   }
+   button{
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 15px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      border-radius: 10%;
+      background-color:red;
+      color: green;
+      border-color: red;
+   }
+   #card{
+      
+   }
+   #reply{
+   }
+</style>
+<head>
+   <title>Christmas Card</title>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="description" content="Wishing you a Merry Christmas!"/>
+  <meta name="robots" content="noindex">
+<head>
+<body>
+   <div id=card>
+   <div id=top>
+      <h1><b>Happy Holidays</b><br><h2>and Merry Christmas</h2></h1></div>
+   <p>Hey guys!!<br>Merry Christmas to the only group chat that I really even talk to! Thank you all for being such great friends! I hope to have classes with all of y'all next semester! Below is a digital christmas card for you!</p>
+   <button id="card" onclick="window.location.href='https://www.punchbowl.com/ecards/share/d4ad870a8f9973d5f2a9'"><b>View Your Christmas Card!</b></button><br>
+   <button id="reply"><b>Reply to Aarush</b></button></div>
+</body>
+<script type="text/javascript">
+function hideStuff(id) {
+  document.getElementById(id).style.display = 'none';
+}
+const date = new Date();
+if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) || date.getYear()+1900 >= 2022){
+      hideStuff("card");
+      alert("Sorry, Nothing available yet. Check back on Christmas Day :)")
+      }
+   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  console.log("Mobile")
+} else {
+  console.log("Desktop")
+}
+   console.log((date.getMonth() + 1)+"/"+date.getDate()+"/"+(date.getYear()+1900))
+document.getElementById("reply").onclick=function(){
+   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  window.location.href='sms:+1-770-569-3987'
+} else {
+  window.location.href='mailto:aarush@aarushmagic.com'
+}}
+</script>
