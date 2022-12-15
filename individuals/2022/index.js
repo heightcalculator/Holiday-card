@@ -1,6 +1,7 @@
 function hideStuff(id) {
   document.getElementById(id).style.display = 'none';
 }
+
 const date = new Date();
 if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) && date.getYear()+1900 === 2022){
       //hideStuff("everything");
@@ -8,6 +9,7 @@ if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) && date.getYear()+1900 =
       }else{
       document.getElementById('everything').style.display = 'block';
       }
+
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   console.log("Mobile")
 } else {
