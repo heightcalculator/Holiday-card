@@ -22,3 +22,4 @@ document.getElementById("reply").onclick=function(){
 } else {
   window.location.href='mailto:aarush@aarushmagic.com'
 }}
+document.getElementById("card").onclick=function(){window.location.href='https://www.punchbowl.com/ecards/share/ec096b138fd47eb0d646'};
