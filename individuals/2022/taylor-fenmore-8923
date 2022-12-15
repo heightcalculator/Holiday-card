@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wishing you a Merry Christmas!"/>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="index.css">
+</head>
+
+ <body>
+   <div id="everything">
+     <div id=card>
+   <div id=top>
+      <h1 id="second"><b>Happy Holidays</b><br><h2>and Merry Christmas</h2></h1></div>
+   <p>Hello Taylor!<br><br>Hope to see you next semester!</p>
+   <p id="template"></p>
+   <button id="card" onclick="window.location.href='https://www.punchbowl.com/ecards/share/d4ad870a8f9973d5f2a9'"><b>View Your Christmas Card!</b></button><br>
+   <button id="reply"><b>Reply to Aarush</b></button></div>
+  </div><br>
+  </body>
+ <script src="index.js"></script>
