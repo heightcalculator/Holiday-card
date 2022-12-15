@@ -3,11 +3,11 @@ function hideStuff(id) {
 }
 const date = new Date();
 if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) && date.getYear()+1900 === 2022){
-      hideStuff("everything");
+      //hideStuff("everything");
       alert("Sorry, Nothing available yet. Check back on Christmas Day :)")
+      }else{
+      document.getElementById('everything').style.display = 'block';
       }
-
-document.body.appendChild(template.content);
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   console.log("Mobile")
 } else {
