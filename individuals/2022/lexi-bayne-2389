@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexi Bayne</title>
+<meta name="description" content="Wishing you a Merry Christmas!"/>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="index.css">
+</head>
+
+ <body>
+    <div id="everything"> <script>document.getElementById("everything").style.display = 'none';</script>
+     <div id=card>
+   <div id=top>
+      <h1 id="second"><b>Happy Holidays</b><br><h2>and Merry Christmas</h2></h1></div>
+   <p>Hello Lexi!<br>I just wanted to wish you a Merry Christmas and a Happy New Year!! I also wanted to thank you for being the amazing person that you are and for being one of my best friends! It's been over 6 months since the cruise and we have stayed such good friends (I hope) and I just hope we stay good friends forever! Have a wonderful day and a wonderful year!!</p>
+   <p id="template"></p>
+   <button id="card" onclick="window.location.href='https://www.punchbowl.com/ecards/share/ec096b138fd47eb0d646'"><b>View Your Christmas Card!</b></button><br>
+   <button id="reply"><b>Reply to Aarush</b></button></div>
+  </div><br>
+  </body>
+   <script src="index.js"></script></html>
