@@ -3,7 +3,7 @@ function hideStuff(id) {
 }
 
 const date = new Date();
-if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) && date.getYear()+1900 === 2021){
+if((date.getDate() < 25 && date.getMonth() + 1 === 12 ) && date.getYear()+1900 === 2022){
       //hideStuff("everything");
       alert("Sorry, Nothing available yet. Check back on Christmas Day :)")
       }else{
