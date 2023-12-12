@@ -1,0 +1,87 @@
+#everything {
+    border-style: inset;
+    border-width: 15px;
+    width: 76%;
+    border-radius: 10px;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white
+        /*rgb(220,220,220)*/
+    ;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+body {
+    font-family: serif;
+    text-align: center;
+    background-color: rgb(217, 217, 217);
+    background-image: url('https://www.itakeyou.co.uk/wp-content/uploads/2022/10/christmas-wallpapers-1.jpg');
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+}
+
+#second {
+    color: green;
+}
+
+h2 {
+    font-size: 25px;
+    color: red;
+}
+
+p {
+    line-height: 1.75;
+    font-family: serif;
+    color: rgb(200, 0, 0)
+}
+
+#top {
+    font-family: serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 10%;
+    background-color: red;
+    color: green;
+    border-color: red;
+}
+
+#card{}
+
+#reply{}
+
+@media only screen and (max-width: 500px) {
+    body {
+        text-align: center;
+        background-color: rgb(211, 211, 211);
+        font-family: serif;
+        font-size: 15px;
+
+    }
+
+    h1 {
+        font-size: 240%;
+
+    }
+
+    button {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 5px;
+        fill: none;
+    }
+}
