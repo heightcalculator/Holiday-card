@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="name">404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wishing you a Merry Christmas!" />
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="index.css">
+</head>
+<script type="text/javascript">
+    var clickHere = function () {
+        let fn = prompt("Please enter your first name:").toLowerCase().trim()
+        let ln = prompt("Please enter your last name:").toLowerCase().trim()
+        window.location.href = 'https://holidays.aarushmagic.com/individuals/2023/' + fn + "-" + ln
+    }
+</script>
+
+<body>
+    <div id="everything">
+        <script>document.getElementById("everything").style.display = 'none';</script>
+        <div id=card>
+            <div id=top>
+                <h1 id="second"><b>Happy Holidays</b><br>
+                    <h2>and Merry Christmas</h2>
+                </h1>
+            </div>
+            <p>Hello!<br>
+                <span>
+                    Hi this is Aarush and I wish you Happy Holidays, Merry Christmas and a Happy New Year 2024! This is
+                    just a generic christmas card but if you believe you had a specific holiday card made for you, <a
+                        href="javascript:clickHere()">click here<a>.
+                </span>
+            </p>
+            <p id="template"></p>
+            <button id="reply"><b>Reply to Aarush</b></button>
+        </div>
+    </div><br>
+</body>
+<script>
+    function hideStuff(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+    if (Date.now() < 1703480400000) {
+        hideStuff("everything");
+        alert("Sorry, Nothing available yet. Check back on Christmas Day :)")
+        console.log("Hey, stop snooping around! You can wait until christmas to get your christmas card! Don't get on the naughty list trying to get it early!")
+    } else {
+        document.getElementById('everything').style.display = 'block';
+    }
+    document.getElementById("reply").onclick = function () {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = 'sms:+1-770-569-3987'
+        } else {
+            window.location.href = 'mailto:aarush@aarushmagic.com'
+        }
+    }
+
+</script>
+
+</html>
