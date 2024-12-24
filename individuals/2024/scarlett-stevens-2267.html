@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holidays!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf5e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/028/544/461/large_2x/new-year-background-with-realistic-festive-gifts-box-snowfall-with-christmas-tree-free-photo.jpg');
+            /* Thanksgiving background */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            max-height: 90vh;
+            /* Limit height of card */
+            overflow-y: auto;
+            /* Enable vertical scroll if content exceeds the card */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .card::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1 {
+            color: rgb(255, 0, 0);
+            font-size: 45px;
+            margin: 0;
+        }
+
+        .message {
+            font-size: 18px;
+            color: rgb(240, 50, 50);
+            margin-top: 20px;
+            word-wrap: break-word;
+            /* Ensures long words are broken and wrapped */
+            /*white-space: pre-wrap; */
+            /* Preserves formatting and prevents overflow */
+        }
+
+        .image-container {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .decorative-leaf {
+            margin-top: 30px;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #b5651d;
+        }
+
+        /* Leaf fall animation */
+        .leaf {
+            position: absolute;
+            top: -100px;
+            width: 40px;
+            height: 40px;
+            background-image: url('images/file (1).png');
+            /* Falling leaf */
+            background-size: cover;
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Merry Christmas!!</h1>
+        <p class="message">
+        </p>
+        <div class="image-container">
+            <img src="images/Scarlett Heart.png" alt="Image Heart">
+        </div>
+    </div>
+
+    <script>
+        // Set the target date and time for Christmas 2024 in Eastern Time (UTC-5 or UTC-4 depending on DST).
+        const targetDate = new Date("2024-12-25T00:00:00-05:00"); // Midnight Christmas 2024 ET
+
+        // Function to check if the current time has reached the target time
+        function checkAccess() {
+            const currentDate = new Date();
+
+            if (currentDate >= targetDate) {
+                // Allow access by removing the overlay
+                const overlay = document.getElementById('access-blocker');
+                if (overlay) {
+                    overlay.remove();
+                }
+            } else {
+                // Update the message to show remaining time (optional)
+                const timeRemaining = Math.max(0, targetDate - currentDate);
+                const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                const countdown = `${hours}h ${minutes}m ${seconds}s`;
+                document.getElementById('countdown').innerText = `Time remaining: ${countdown}`;
+
+                // Check again after 1 second
+                setTimeout(checkAccess, 1000);
+            }
+        }
+
+        // Create an overlay element to block access
+        function blockAccess() {
+            const overlay = document.createElement('div');
+            overlay.id = 'access-blocker';
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+            overlay.style.color = 'white';
+            overlay.style.display = 'flex';
+            overlay.style.flexDirection = 'column';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.zIndex = '9999';
+            overlay.innerHTML = `
+        <h1>Access Blocked</h1>
+        <p>The website will be accessible at midnight on Christmas Day 2024 (Eastern Time).</p>
+        <p id="countdown">Time remaining: Calculating...</p>
+    `;
+            document.body.appendChild(overlay);
+
+            // Start the countdown check
+            checkAccess();
+        }
+
+        // Initialize the block on page load
+        window.onload = blockAccess();
+        /*
+                window.onload = function () {
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    } else {
+                        document.getElementsByClassName("card")[0].style.transform = `rotate(${Math.random() * 0 - 0}deg)`
+                    }
+                }
+        */
+        const leafCount = 10; // Number of leaves
+        const body = document.body;
+
+        for (let i = 0; i < leafCount; i++) {
+            const leaf = document.createElement('div');
+            leaf.classList.add('leaf');
+            leaf.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            leaf.style.animation = `fall ${3 + Math.random() * 5}s linear infinite`; // Random fall speed
+
+            body.appendChild(leaf);
+        }
+    </script>
+
+</body>
+
+</html>
